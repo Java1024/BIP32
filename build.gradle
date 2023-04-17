@@ -96,12 +96,12 @@ dependencies {
     compile 'io.github.novacrypto:SHA256:2022.01.17@jar'
     compile 'io.github.novacrypto:ToRuntime:2022.01.17@jar'
     compile 'io.github.novacrypto:Base58:2022.01.17@jar'
-    compile 'io.github.wheat235:BIP32Derivation:2019.01.27@jar'
+    compile 'com.gitee.wheat235:BIP32Derivation:2019.01.27@jar'
     testCompile 'org.jmockit:jmockit:1.44'
     testCompile 'junit:junit:4.12'
     testCompile 'com.google.code.gson:gson:2.8.5'
     testCompile 'org.assertj:assertj-core:3.11.1'
-    testCompile 'io.github.wheat235:BIP39:2019.01.27@jar'
+    testCompile 'com.gitee.wheat235:BIP39:2019.01.27@jar'
 }
 
 test {
