@@ -1,6 +1,6 @@
 /*
  *  BIP32 library, a Java implementation of BIP32
- *  Copyright (C) 2017-2019 Alan Evans, NovaCrypto
+ *  Copyright (C) 2017-2018 Alan Evans, NovaCrypto
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@
 
 package io.github.novacrypto.bip32;
 
+import org.spongycastle.util.encoders.Hex;
 import io.github.novacrypto.bip32.derivation.CkdFunction;
 import io.github.novacrypto.bip32.derivation.CkdFunctionDerive;
 import io.github.novacrypto.bip32.derivation.Derivation;
@@ -192,5 +193,13 @@ public final class ExtendedPublicKey implements
     @Override
     public int childNumber() {
         return hdKey.getChildNumber();
+    }
+
+    public byte[] getKey() {
+        return hdKey.getKey();
+    }
+
+    public String getPublicKey(){
+        return new String(Hex.encode(getKey()));
     }
 }

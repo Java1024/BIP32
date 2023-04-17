@@ -21,6 +21,7 @@
 
 package io.github.novacrypto.bip32;
 
+import org.spongycastle.util.encoders.Hex;
 import io.github.novacrypto.bip32.derivation.CkdFunction;
 import io.github.novacrypto.bip32.derivation.CkdFunctionDerive;
 import io.github.novacrypto.bip32.derivation.Derivation;
@@ -116,6 +117,14 @@ public final class ExtendedPrivateKey implements
                 hdKey.toBuilder()
                         .network(otherNetwork)
                         .build());
+    }
+
+    public byte[] getKey() {
+        return hdKey.getKey();
+    }
+
+    public String getPrivateKey(){
+        return new String(Hex.encode(getKey()));
     }
 
     @Override
